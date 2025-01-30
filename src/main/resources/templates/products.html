@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+<h2>Product Management</h2>
+
+<form id="fetchForm" method="post" action="/api/v1/products">
+    <div class="mb-3">
+        <label for="uri" class="form-label">Enter URI:</label>
+        <input type="text" class="form-control" id="uri" name="uri" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Fetch and Save Products</button>
+</form>
+
+<hr>
+
+<a href="/api/v1/products" class="btn btn-success">Download Report</a>
+
+<script>
+    document.getElementById('fetchForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const uri = document.getElementById('uri').value;
+
+        fetch('/api/v1/products', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({uri: uri})
+        }).then(response => {
+            if (response.ok) {
+                alert('Products fetched and saved successfully!');
+            } else {
+                alert('Error occurred while saving products.');
+            }
+        });
+    });
+</script>
+</body>
+</html>

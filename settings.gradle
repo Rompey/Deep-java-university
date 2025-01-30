@@ -1,0 +1,3 @@
+rootProject.name = 'deep_java_university'
+
+include ':product_list'
