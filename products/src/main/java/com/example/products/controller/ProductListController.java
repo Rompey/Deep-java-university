@@ -1,7 +1,7 @@
-package com.example.product_list.controller;
+package com.example.products.controller;
 
-import com.example.product_list.model.Product;
-import com.example.product_list.service.ProductList;
+import com.example.products.model.Product;
+import com.example.products.service.ProductList;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,6 +1,6 @@
-package com.example.product_list.service;
+package com.example.products.service;
 
-import com.example.product_list.model.Product;
+import com.example.products.model.Product;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

@@ -1,6 +1,5 @@
-package com.example.product_list;
+package com.example.products;
 
-import com.example.product_list.service.ProductList;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
